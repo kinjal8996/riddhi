@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Property Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .box {
+            width: 150px;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid #008cba;
+            text-align: center;
+            line-height: 100px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .static-box {
+            position: static; /* Default position */
+        }
+
+        .relative-box {
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        .fixed-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+
+        .sticky-box {
+            position: -webkit-sticky; /* For Safari */
+            position: sticky;
+            top: 10px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Position Property Example</h1>
+
+    <div class="container">
+        <h2>Static Position</h2>
+        <p>The element is positioned according to the normal flow of the document.</p>
+        <div class="box static-box">Static</div>
+    </div>
+
+    <div class="container">
+        <h2>Relative Position</h2>
+        <p>The element is positioned relative to its normal position. Use <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties.</p>
+        <div class="box relative-box">Relative</div>
+    </div>
+
+    <div class="container">
+        <h2>Fixed Position</h2>
+        <p>The element is positioned relative to the browser window. It will stay in the same place even if the page is scrolled.</p>
+        <div class="box fixed-box">Fixed</div>
+    </div>
+
+    <div class="container" style="position: relative; height: 200px;">
+        <h2>Absolute Position</h2>
+        <p>The element is positioned relative to its nearest positioned ancestor. Use <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties.</p>
+        <div class="box absolute-box">Absolute</div>
+    </div>
+
+    <div class="container">
+        <h2>Sticky Position</h2>
+        <p>The element is positioned based on the user's scroll position. It will switch between relative and fixed positioning depending on the scroll position.</p>
+        <div class="box sticky-box">Sticky</div>
+    </div>
+</body>
+</html>
